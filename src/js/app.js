@@ -62,9 +62,14 @@ var hnx = {};
 		});
 	};
 
+	var initResponsiveImageMaps = function() {
+		$('img[usemap]').rwdImageMaps();
+	};
+
 	hnx.init = function() {
 		initTooltips();
 		initLift();
 		initSmoothScrolling();
+		initResponsiveImageMaps();
 	};
 })(hnx, jQuery);

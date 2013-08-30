@@ -23,7 +23,8 @@ iframe {
 	min-height: 100%;
 	margin-bottom: 100px;
 }
-a {
+a,
+area {
 	cursor: pointer;
 }
 
@@ -36,6 +37,9 @@ iframe,
 video,
 object {
 	max-width: 100%;
+}
+.start-img img {
+	height: auto !important;
 }
 
 .content {
