@@ -66,10 +66,18 @@ var hnx = {};
 		$('img[usemap]').rwdImageMaps();
 	};
 
+	var initGrabModals = function() {
+		$('#grab area').on('click', function() {
+			$($(this).attr('href')).modal('show');
+			return false;
+		});
+	};
+
 	hnx.init = function() {
 		initTooltips();
 		initLift();
 		initSmoothScrolling();
 		initResponsiveImageMaps();
+		initGrabModals();
 	};
 })(hnx, jQuery);

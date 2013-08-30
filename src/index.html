@@ -147,7 +147,7 @@
 					<p>Ein Mann alleine mit einer aufgeschlitzten Leiche.</p>
 					<p>Die Pathologie, ein Ort des Grauens? Traut euch - wir zeigen euch, was dort unten tatsächlich passiert.</p>
 				</div>
-				
+
 				<video width="1000" height="563" controls="controls">
 					<source src="http://wordpress.p193073.webspaceconfig.de/wp-content/uploads/2013/08/181328426.mp4" type="video/mp4"></source>
 				</video>
@@ -165,17 +165,14 @@
 				</div>
 
 				<map id="grab" name="grab">
-					<area title="Knochen" coords="0,650,346,700" shape="rect" />
-					<area title="Knochen" coords="190,520,346,650" shape="rect" />
-					<area title="Blauer Topf" coords="47,218,145,328" shape="rect" />
-					<area title="Einfachgrab" coords="160,306,345,465" shape="rect" />
-					<area title="Doppelgrab" coords="0,424,160,650" shape="rect" />
-					<area href="#" title="Kreuz" coords="180,20,400,230" shape="rect" />
-					<area href="#" title="Kreuz" coords="253,244,315,280" shape="rect" />
-					<area title="Wuermer" coords="42,239,256,327" shape="rect" />
-					<area title="Wuermer" coords="259,284,310,349" shape="rect" />
-					<area title="Wuermer" coords="313,233,547,363" shape="rect" />
-					<area title="Blume" coords="56,151,190,240" shape="rect" />
+					<area href="#knochenModal" title="Knochen" coords="0,650,346,700" shape="rect" />
+					<area href="#knochenModal" title="Knochen" coords="190,520,346,650" shape="rect" />
+					<area href="#urneModal" title="Blauer Topf" coords="47,218,145,328" shape="rect" />
+					<area href="#einfachgrabModal" title="Einfachgrab" coords="160,306,345,465" shape="rect" />
+					<area href="#doppelgrabModal" title="Doppelgrab" coords="0,424,160,650" shape="rect" />
+					<area href="#kreuzModal" title="Kreuz" coords="90,0,235,160" shape="rect" />
+					<area href="#wuermerModal" title="Wuermer" coords="75,165,300,215" shape="rect" />
+					<area href="#bepflanzungModal" title="Blume" coords="10,90,75,215" shape="rect" />
 				</map>
 
 				<div class="friedhof-img">
@@ -183,7 +180,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="4meter" class="fullscreen lift-target">
 			<div class="content">
 				<span class="label label-danger label-depth">-4 Meter</span>
@@ -215,8 +212,9 @@
 					<p>Wenn man wissen will, wie es unter der Erde aussieht, muss man ins Salzbergwerk gehen.</p>
 					<p>Wir waren da, wo normale Besucher nicht hinkommen: am absolut tiefsten Punkt unter Heilbronn.</p>
 				</div>
-				
-				<iframe src="https://popcorn.webmadecontent.org/10zl_" width="640" height="403" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+
+				<iframe src="https://popcorn.webmadecontent.org/10zl_" width="640" height="403" frameborder="0" mozallowfullscreen webkitallowfullscreen
+					allowfullscreen></iframe>
 			</div>
 		</div>
 
@@ -225,21 +223,14 @@
 				<h1>Impressum</h1>
 
 				<div class="desc">
-					<p>Heilbronn von unten ist ein Projekt der Volontäre der <a href="http://www.stimme.de">Heilbronner Stimme</a>.</p>
+					<p>
+						Heilbronn von unten ist ein Projekt der Volontäre der <a href="http://www.stimme.de">Heilbronner Stimme</a>.
+					</p>
 					<address>
-						HEILBRONNER STIMME GmbH &amp; Co. KG<br />
-						Allee 2, 74072 Heilbronn<br />
-						Telefon 07131 615-0<br />
-						Fax 07131 615-200<br />
-						E-Mail servicecenter@stimme.de<br />
-						Amtsgericht Stuttgart HRA 103208<br />
-						Umsatzsteuer ID: DE 145800252<br />
-						<br />
-						phG: Heilbronner Stimme Verwaltungsgesellschaft mbH<br />
-						Amtsgericht Stuttgart HRB 103454<br />
-						<br />
-						Geschäftsführer:<br />
-						Tilmann Distelbarth, Bernd Herzberger<br />
+						HEILBRONNER STIMME GmbH &amp; Co. KG<br /> Allee 2, 74072 Heilbronn<br /> Telefon 07131 615-0<br /> Fax 07131 615-200<br /> E-Mail
+						servicecenter@stimme.de<br /> Amtsgericht Stuttgart HRA 103208<br /> Umsatzsteuer ID: DE 145800252<br /> <br /> phG: Heilbronner
+						Stimme Verwaltungsgesellschaft mbH<br /> Amtsgericht Stuttgart HRB 103454<br /> <br /> Geschäftsführer:<br /> Tilmann Distelbarth,
+						Bernd Herzberger<br />
 					</address>
 				</div>
 			</div>
@@ -258,7 +249,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="doppelgrabModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -280,7 +271,136 @@
 					</p>
 					<p>Ideal ist ein lockerer, luftdurchlässiger Boden. Tonartiger Lehm behindert die Luftzufuhr – das Wasser fließt schlecht ab.</p>
 					<p>In Heilbronn findet man auf den Friedhöfen zum großen Teil einen Lössboden vor, laut Martin Heier vom Heilbronner Hauptfriedhof
-						mache dieser keine Probleme im Verwesungsprozess.
+						mache dieser keine Probleme im Verwesungsprozess.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="einfachgrabModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Einfachgrab</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						<strong>Vorschriften</strong>
+					</p>
+					<p>Es gibt die verrücktesten Särge – aber natürlich gibt es auch Vorschriften: Die Särge mussen so abgedichtet sein, dass das
+						Durchsickern von Feuchtigkeit ausgeschlossen ist - Wasser hindert den Verwesungsprozess. Särge für Erdbestattungen müssen aus leicht
+						verweslichem Holz bestehen und dürfen nicht mit umweltbelastenden Chemikalien imprägniert sein. Särge für Feuer- und Erdbestattungen
+						dürfen eine Länge von 2,20 m, eine Breite von 0,85 m und eine Höhe von 0,60 m nicht überschreiten.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="wuermerModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Würmer</h4>
+				</div>
+				<div class="modal-body">
+					<p>„Dann fressen mich ja die Würmer!“ Es ist ein weit verbreiteter Irrglaube, dass Würmer und anderes Getier unseren Körper
+						durchfressen, wenn wir mal unter der Erde liegen. Manche ekelt die Vorstellung so sehr an, dass sie sich lieber einäschern lassen.</p>
+					<p>Dabei können Würmer und Insekten in der Regel in der Tiefe des Grabes nicht überleben. Aasfressende Insekten dringen meist nur bis
+						zu 30 Zentimeter tief in die Erde. Die Särge liegen viel tiefer. Wahr ist: Bereits vor der Bestattung können Fliegen oder andere Insekten
+						eventuell ihre Eier im Körper des Leichnams ablegen. Allerdings können auch diese nur kurz überleben.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="bepflanzungModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Bepflanzung</h4>
+				</div>
+				<div class="modal-body">
+					<p>Grabpflanzen sollen nicht nur gut aussehen und möglichst pflegeleicht sein. Sie müssen auch auf die besonderen Gegebenheiten des
+						Friedhofs abgestimmt sein.</p>
+					<p>
+						Wie eine <a href="http://www.dbu.de/123artikel33716rss.html">Studie der Deutschen Bundesstiftung Umwelt (DBU)</a> gezeigt hat, wird
+						hierzulande auf Friedhöfen zu viel gegossen. „Das Wasser flutet Gräber, verstopft die Poren des Bodens und erschwert die Verwesung“, heißt
+						es in dem Forschungsbericht. Im schlimmsten Fall produziere man durch maßloses Gießen sogenannte „Wachsleichen“, Leichen, die nicht
+						verwesen.
+					</p>
+					<p>Als Grabbepflanzung deshalb empfohlen: Stauden statt saisonaler Pflanzen. Die tiefwurzelnden Stauden holen sich die Feuchtigkeit aus
+						dem Boden, sie brauchen weniger Gießwasser. Wichtig sei auch ein lockeres, luftdurchlässiges Erdreich. Der Experte Fritz Brickwedde von
+						der DBU weist darauf hin, dass man keinesfalls die Erde festtreten solle, wie es viele professionelle Grabpfleger empfehlen.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="knochenModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Knochen</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						<strong>Verwesung</strong>
+					</p>
+					<p>Laut Friedhofssatzung beträgt die Ruhezeit der Leichen und Aschen auf Heilbronner Friedhöfen 18 Jahre, bei Kindern, die vor
+						Vollendung des sechsten Lebensjahres verstorben sind, zehn Jahre. Danach wird das Grab für die weitere Nutzung ausgehoben. Es finden sich
+						aber immer noch menschliche Überreste in den Gräbern, Großknochen beispielsweise. Laut Martin Heier vom Heilbronner Hauptfriedhof werden
+						diese zunächst mit ausgehoben, um sie schließlich noch tiefer in das Grab legen zu können. Auf diese Überreste kommt nun ein neues Grab.</p>
+					<p>
+						<strong>Kleidung</strong>
+					</p>
+					<p>Was die wenigsten wissen: Die Kleidung des Verstorbenen sollte leicht und gut abbaubar sein, Baumwolle eignet sich besonders.
+						Kunstfasern und Nylonkleidung können den Verwesungsprozess stark behindern und verrotten selbst nicht. „Wir finden manchmal auch Knochen
+						in fast vollständig erhaltenen Kleidungsstücken“, sagt Martin Heier.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="urneModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Urne</h4>
+				</div>
+				<div class="modal-body">
+					<iframe src="http://infogr.am/Trend-zur-Feuerbestattung" width="578px" height="1158" style="max-width:100%;" scrolling="yes" frameborder="0"></iframe>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="kreuzModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Friedhöfe</h4>
+				</div>
+				<div class="modal-body">
+					<iframe width="100%" height="400px" style="max-height:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+						src="http://maps.google.com/maps/ms?msid=211773603488375674917.0004db6b44168f38fae8d&amp;msa=0&amp;hl=de&amp;ie=UTF8&amp;t=m&amp;ll=49.155215,9.18457&amp;spn=0.157176,0.291824&amp;z=11&amp;output=embed"></iframe>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
