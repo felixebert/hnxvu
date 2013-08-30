@@ -31,8 +31,14 @@ a {
 	background-color: #d9534f;
 }
 
+img,
+iframe {
+	max-width: 100%;
+}
+
 .content {
-	width: 1000px;
+	width: 100%;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding-top: 90px;
 }
@@ -58,10 +64,6 @@ a {
 	font-family:"Courier New", Courier, monospace;
 	font-size: 20px;
 }
-.start-img {
-	margin: 0 auto;
-	width: 1000px;
-}
 
 .lift {
 	position: fixed;
@@ -80,4 +82,10 @@ a {
 
 .qtip-big {
 	font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+	.lift {
+		display: none !important;
+	}
 }
