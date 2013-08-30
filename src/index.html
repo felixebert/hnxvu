@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>HNXVU</title>
+<title>Heilbronn von unten</title>
 <meta name="author" content="Heilbronner Stimme">
 
 <!-- build:css css/hnxvu.css -->
@@ -17,33 +17,37 @@
 <!-- endbuild -->
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">HNXVU</a>
+			<a class="navbar-brand" href="#">Heilbronn von unten</a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
 				<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Geschichten <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#230meter">Ein Leben in zwei Tüten</a></li>
-						<li><a href="#">So klingt Heilbronn von unten</a></li>
-						<li><a href="#">Irish Pub</a></li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
+						<li><a href="#1meter17">1,17 Meter tief im Stadtgewühl <span class="badge">1,17m</span></a></li>
+						<li><a href="#0meter">Ein Leben in zwei Tüten <span class="badge">0m</span></a></li>
+						<li><a href="#-0,10meter">So klingt Heilbronn von unten <span class="badge">-0,10m</span></a></li>
+						<li><a href="#-0,50meter">Irish Pub <span class="badge">-0,50m</span></a></li>
+						<li><a href="#-1meter">Ein gar nicht so gruseliger Krankenhauskeller <span class="badge">-1m</span></a></li>
+						<li><a href="#2meter30">Die letzte Reise geht nach unten <span class="badge">-2,30m</span></a></li>
+						<li><a href="#-4meter">Kellerkneipen <span class="badge">-4m</span></a></li>
+						<li><a href="#-5meter">Explodierende Schafe im Untergrund <span class="badge">-5m</span></a></li>
+						<li><a href="#-200meter">Der Tiefpunkt schmeckt salzig <span class="badge">-200m</span></a></li>
 					</ul></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Impressum</a></li>
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</nav>
+
+	<div id="scroll">
+
 
 	<div id="header">
 		<div class="header-light-bg"></div>
@@ -53,7 +57,7 @@
 			<area shape="rect" title="Ein gar nicht so gruseliger Krankenhauskeller" coords="16,276,159,442" href="#1meter" />
 			<area shape="rect" title="Explodierende Schafe im Untergrund" coords="205,383,240,542" href="#5meter" />
 			<area shape="rect" title="Explodierende Schafe im Untergrund" coords="2,509,204,544" href="#5meter" />
-			<area shape="rect" title="Die letzte Reise geht nach unten" coords="295,352,386,445" href="#230meter" />
+			<area shape="rect" title="Die letzte Reise geht nach unten" coords="295,352,386,445" href="#2meter30" />
 			<area shape="rect" title="Ein Leben in zwei Tüten" coords="216,284,295,337" href="#0meter" />
 			<area shape="rect" title="So klingt Heilbronn von unten" coords="415,216,490,302" href="#01meter" />
 			<area shape="rect" title="So klingt Heilbronn von unten" coords="494,218,524,261" href="#01meter" />
@@ -62,7 +66,7 @@
 			<area shape="rect" title="Kellerkneipen" coords="495,271,528,299" href="#4meter" />
 			<area shape="rect" title="Kellerkneipen" coords="532,245,645,297" href="#4meter" />
 			<area shape="rect" title="Kellerkneipen" coords="547,229,620,245" href="#4meter" />
-			<area shape="rect" title="1,17 Meter tief im Stadtgewühl" coords="674,244,800,354" href="#117meter" />
+			<area shape="rect" title="1,17 Meter tief im Stadtgewühl" coords="674,244,800,354" href="#1meter17" />
 			<area shape="rect" title="Irish Pub" coords="837,233,969,437" href="#05meter" />
 			<area shape="circle" title="Der Tiefpunkt schmeckt salzig" coords="742,501,49" href="#200meter" />
 		</map>
@@ -78,26 +82,22 @@
 			<img src="img/header.jpg" title="Heilbronn" usemap="#imgmaphnxvu" />
 		</div>
 	</div>
-	
-	<div id="117meter" style="text-align: center;min-height:100%;margin-bottom:100px;">
+
+	<div id="1meter17" class="fullscreen">
 		<div class="content">
-			<div style="font-size: 33px;">
-				<span class="label label-danger">1,17 Meter</span>
-			</div>
+			<span class="label label-danger label-depth">1,17 Meter</span>
 			<h1>1,17 Meter tief im Stadtgewühl</h1>
 
-			<br />
-			<div style="width: 300px; margin: 0 auto;">
+			<div class="desc">
 				<p>Erlebe Heilbronn mit Kinderaugen.</p>
 				<p>Fünf junge Nachwuchsjournalisten zeigen unter anderem, wie es ist, ständig Hinterteile im Gesicht zu haben.</p>
 			</div>
-			
-			<br />
-			<iframe src="http://player.vimeo.com/video/65516362" height="421" width="750" allowfullscreen="" frameborder="0"></iframe>
+
+			<iframe src="http://player.vimeo.com/video/65516362" height="421" width="750"></iframe>
 		</div>
 	</div>
 
-	<div id="230meter" style="text-align: center;min-height:100%;margin-bottom:100px;">
+	<div id="2meter30" style="text-align: center; min-height: 100%; margin-bottom: 100px;">
 		<div class="content">
 			<div style="font-size: 33px;">
 				<span class="label label-danger">-2,30 Meter</span>
@@ -136,6 +136,8 @@
 			<img src="img/friedhof-cropped.jpg" title="Friedhof" usemap="#grab" style="height: 700px;" />
 		</div>
 	</div>
+
+</div>
 
 	<div id="nav">
 		<div>
@@ -182,7 +184,6 @@
 
 	<!-- build:js js/hnxvu.js -->
 	<script src="lib/jquery.js"></script>
-	<script src="lib/jquery.maphilight.js"></script>
 	<script src="lib/jquery.qtip.js"></script>
 	<script src="lib/jquery.transit.js"></script>
 	<script src="lib/bootstrap.js"></script>

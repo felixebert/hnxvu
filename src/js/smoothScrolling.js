@@ -5,7 +5,7 @@
 		var to = isNaN(target) ? $(target).offset().top : target;
 		var from = $(window).scrollTop();
 		var dy = to - from;
-		var body = $("body");
+		var body = $("#scroll");
 
 		if (sliding) {
 			$(window).scrollTop(to);
@@ -29,14 +29,16 @@
 	hnx.scrollTo = function(target, duration) {
 		duration = isNaN(duration) ? 500 : duration;
 
-		if (Modernizr.csstransitions && Modernizr.csstransforms) {
+		if (1 == 2 || Modernizr.csstransitions && Modernizr.csstransforms) {
 			slideTo(target, duration);
 		} else {
-			$('html, body').animate({
+			$('body').animate({
 				scrollTop: $(target).offset().top
 			}, duration);
 		}
 
-		// history.pushState({}, "", href);
+		if (Modernizr.history) {
+			history.pushState({}, "", target);
+		}
 	};
 })(hnx, jQuery, Modernizr);

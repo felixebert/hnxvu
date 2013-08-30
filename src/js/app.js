@@ -12,7 +12,7 @@ var hnx = {};
 	};
 
 	var initSmoothScrolling = function() {
-		$('area').on('click', function() {
+		$('area, .nav a').on('click', function() {
 			var targetId = $(this).attr('href');
 			hnx.scrollTo(targetId, 2000);
 			return false;
