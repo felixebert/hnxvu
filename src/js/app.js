@@ -67,25 +67,23 @@ var hnx = {};
 	};
 
 	var initGrabModals = function() {
-		$('#grab area')
-				.on(
-						'click',
-						function() {
-							var target = $(this).attr('href');
-							$(target).modal('show');
+		var onClick = function() {
+			var target = $(this).attr('href');
+			$(target).modal('show');
 
-							var html = null;
-							if (target == '#urneModal') {
-								html = '<iframe src="//infogr.am/Trend-zur-Feuerbestattung" width="550" height="1163" scrolling="no" frameborder="0" style="border:none;"></iframe><div style="width:550px;border-top:1px solid #acacac;padding-top:3px;font-family:Arial;font-size:10px;text-align:center;"><a target="_blank" href="http://infogr.am/Trend-zur-Feuerbestattung" style="color:#acacac;text-decoration:none;">Trend zur Feuerbestattung</a> | <a style="color:#acacac;text-decoration:none;" href="http://infogr.am" target="_blank">Infographics</a></div>';
-							}
-							if (target == '#kreuzModal') {
-								html = '<iframe width="100%" height="400px" style="max-height:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msid=211773603488375674917.0004db6b44168f38fae8d&amp;msa=0&amp;hl=de&amp;ie=UTF8&amp;t=m&amp;ll=49.155215,9.18457&amp;spn=0.157176,0.291824&amp;z=11&amp;output=embed"></iframe>';
-							}
-							if (html) {
-								$(target + ' .modal-body').html(html);
-							}
-							return false;
-						});
+			var html = null;
+			if (target == '#urneModal') {
+				html = '<iframe src="//infogr.am/Trend-zur-Feuerbestattung" width="550" height="1163" scrolling="no" frameborder="0" style="border:none;"></iframe><div style="width:550px;border-top:1px solid #acacac;padding-top:3px;font-family:Arial;font-size:10px;text-align:center;"><a target="_blank" href="http://infogr.am/Trend-zur-Feuerbestattung" style="color:#acacac;text-decoration:none;">Trend zur Feuerbestattung</a> | <a style="color:#acacac;text-decoration:none;" href="http://infogr.am" target="_blank">Infographics</a></div>';
+			}
+			if (target == '#kreuzModal') {
+				html = '<iframe width="100%" height="600px" style="max-height:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msid=211773603488375674917.0004db6b44168f38fae8d&amp;msa=0&amp;hl=de&amp;ie=UTF8&amp;t=m&amp;ll=49.155215,9.18457&amp;spn=0.157176,0.291824&amp;z=11&amp;output=embed"></iframe>';
+			}
+			if (html) {
+				$(target + ' .modal-body').html(html);
+			}
+			return false;
+		};
+		$('#grab area').on('click', onClick);
 	};
 
 	hnx.init = function() {
