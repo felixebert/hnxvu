@@ -4,6 +4,7 @@ body, html {
 body {
 	background: #222;
 	color: #FFF;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 #scroll {
 	position: absolute;
@@ -12,11 +13,11 @@ body {
 	right: 0;
 	left: 0;
 	z-index: 0;
+	padding-top: 60px;
 }
 iframe {
 	border: 0;
 }
-
 .fullscreen {
 	position: relative;
 	text-align: center;
@@ -27,20 +28,9 @@ iframe {
 .nav .badge {
 	background-color: #d9534f;
 }
-#header {
-	position: relative;
-	padding-top: 10px;
-	height: 1200px;
-}
-.header-img {
-	position: relative;
-	z-index: 20;
-	margin: 0 auto;
-	width: 1000px;
-}
 
 .content {
-	width: 800px;
+	width: 1000px;
 	margin: 0 auto;
 	padding-top: 90px;
 }
@@ -50,10 +40,28 @@ iframe {
 .label-depth {
 	font-size: 22px;
 }
-
 .desc {
 	width: 300px;
 	margin: 17px auto;
+}
+
+.teaser {
+	text-align: left;
+	margin-bottom: 21px;
+}
+.teaser h1 {
+	font-size: 54px;
+}
+.teaser p {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 20px;
+}
+#header .content {
+	padding-top: 0;
+}
+.header-img {
+	margin: 0 auto;
+	width: 1000px;
 }
 
 #nav {
