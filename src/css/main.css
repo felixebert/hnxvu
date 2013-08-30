@@ -32,7 +32,9 @@ a {
 }
 
 img,
-iframe {
+iframe,
+video,
+object {
 	max-width: 100%;
 }
 
