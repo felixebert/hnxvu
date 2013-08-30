@@ -6,7 +6,13 @@ var hnx = {};
 	var initTooltips = function() {
 		$('area').each(function(index, area) {
 			$(area).qtip({
-				style: 'red'
+				style: {
+					classes: 'qtip-red qtip-rounded qtip-big'
+				},
+				position: {
+					my: 'top left',
+					at: 'top right'
+				}
 			});
 		});
 	};
