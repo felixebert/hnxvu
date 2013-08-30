@@ -20,6 +20,12 @@
 				complete: function() {
 					body.css("transition", "none");
 					sliding = false;
+
+					if (target == '#start') {
+						$('.lift').hide();
+					} else {
+						$('.lift').show();
+					}
 				}
 			});
 			sliding = true;

@@ -13,7 +13,6 @@ body {
 	right: 0;
 	left: 0;
 	z-index: 0;
-	padding-top: 60px;
 }
 iframe {
 	border: 0;
@@ -23,6 +22,9 @@ iframe {
 	text-align: center;
 	min-height: 100%;
 	margin-bottom: 100px;
+}
+a {
+	cursor: pointer;
 }
 
 .nav .badge {
@@ -56,34 +58,22 @@ iframe {
 	font-family:"Courier New", Courier, monospace;
 	font-size: 20px;
 }
-#header .content {
-	padding-top: 0;
-}
-.header-img {
+.start-img {
 	margin: 0 auto;
 	width: 1000px;
 }
 
-#nav {
-	-webkit-transform: translateZ(0);
+.lift {
 	position: fixed;
-	right: 40px;
+	right: 30px;
 	top: 50%;
-	margin-top: -50px;
-	color: #F8FE40;
+	margin-top: -115px;
 	font-size: 50px;
 }
-#nav div {
-	width: 60px;
+.lift div {
 	opacity: 0.8;
 	margin-bottom: 7px;
 }
-
-.jumbotron-header {
-	position: relative;
-	z-index: 30;
-	width: 1000px;
-	margin: 0 auto;
-	background: none;
-	color: #EEE;
+.lift a {
+	color: #F8FE40;
 }

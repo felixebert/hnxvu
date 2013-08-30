@@ -22,7 +22,7 @@
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Heilbronn von unten</a>
+			<a class="navbar-brand" href="#start">Heilbronn von unten</a>
 		</div>
 
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -47,7 +47,7 @@
 	</nav>
 
 	<div id="scroll">
-		<div id="header" class="fullscreen">
+		<div id="start" class="fullscreen lift-target">
 			<div class="content">
 				<div class="teaser">
 					<h1>Heilbronn von unten</h1>
@@ -73,13 +73,13 @@
 					<area shape="circle" title="Der Tiefpunkt schmeckt salzig" coords="742,501,49" href="#200meter" />
 				</map>
 		
-				<div class="header-img">
+				<div class="start-img">
 					<img src="img/header.jpg" title="Heilbronn" usemap="#imgmaphnxvu" />
 				</div>
 			</div>
 		</div>
 	
-		<div id="1meter17" class="fullscreen">
+		<div id="1meter17" class="fullscreen lift-target">
 			<div class="content">
 				<span class="label label-danger label-depth">1,17 Meter</span>
 				<h1>1,17 Meter tief im Stadtgewühl</h1>
@@ -93,56 +93,52 @@
 			</div>
 		</div>
 	
-		<div id="2meter30" style="text-align: center; min-height: 100%; margin-bottom: 100px;">
+		<div id="2meter30" class="fullscreen lift-target">
 			<div class="content">
-				<div style="font-size: 33px;">
-					<span class="label label-danger">-2,30 Meter</span>
-				</div>
+				<span class="label label-danger label-depth">-2,30 Meter</span>
 				<h1>Die letzte Reise geht nach unten</h1>
 	
-				<br />
-				<div style="width: 300px; margin: 0 auto;">
+				<div class="desc">
 					<p>Wissen wir eigentlich, was unter der Erde mit unserem Körper passiert? Mit gefräßigen Würmern hat es wenig zu tun.</p>
 					<p>Wer wirklich mehr erfahren will: Unsere interaktive Grafik zeigt interessante Facts.</p>
 				</div>
-				<br />
-			</div>
 	
-			<map id="grab" name="grab">
-				<area id="einfachgrab" style="z-index: '0';" title="Einfachgrab" alt="Einfachgrab" coords="280,456,505,665" shape="rect" target="_blank" />
-				<area id="knochen" style="z-index: '1';" alt="Knochen" coords="417,826,444,789,458,793,430,831" shape="poly" target="_blank" />
-				<area id="knochen1" style="z-index: '1';" alt="Knochen" coords="412,928,420,920,453,932,486,953,477,957" shape="poly" target="_blank" />
-				<area id="knochen2" style="z-index: '1';" alt="Knochen" coords="350,952,385,907,400,913,365,956" shape="poly" target="_blank" />
-				<area id="knochen3" style="z-index: '1';" alt="Knochen" coords="258,960,265,963,300,960,293,972" shape="poly" target="_blank" />
-				<area id="knochen4" alt="Knochen" coords="127,967,170,960,200,940,212,950,175,966,142,983" shape="poly" target="_blank" />
-				<area id="knochen5" alt="Knochen" coords="177,1026,210,1005,220,1015,185,1036" shape="poly" target="_blank" />
-				<area id="blauertopf" style="z-index: '0';" alt="Blauer Topf" coords="132,328,220,438" shape="rect" target="_blank" />
-				<area id="bodenunten" style="z-index: '0';" alt="Boden unten" coords="303,756,540,1050" shape="rect" target="_blank" />
-				<area id="bodenunten1" style="z-index: '0';" alt="Boden unten" coords="40,940,300,1060" shape="rect" target="_blank" />
-				<area id="doppelgrab" style="z-index: '0';" alt="Doppelgrab" coords="51,624,270,923" shape="rect" target="_blank" />
-				<area id="kreutz" style="z-index: '0';" alt="Kreutz" coords="180,20,400,230" shape="rect" target="_blank" />
-				<area id="kreutz1" style="z-index: '0';" alt="Kreutz" coords="253,244,315,280" shape="rect" target="_blank" />
-				<area id="wuermer" style="z-index: '0';" alt="Wuermer" coords="42,239,256,327" shape="rect" target="_blank" />
-				<area id="wuermer1" style="z-index: '0';" alt="Wuermer" coords="259,284,310,349" shape="rect" target="_blank" />
-				<area id="wuermer2" style="z-index: '0';" alt="Wuermer" coords="313,233,547,363" shape="rect" target="_blank" />
-				<area id="blume" style="z-index: '0';" alt="Blume" coords="56,151,190,240" shape="rect" target="_blank" />
-			</map>
-	
-			<div class="friedhof-img">
-				<img src="img/friedhof-cropped.jpg" title="Friedhof" usemap="#grab" style="height: 700px;" />
+				<map id="grab" name="grab">
+					<area id="einfachgrab" style="z-index: '0';" title="Einfachgrab" alt="Einfachgrab" coords="280,456,505,665" shape="rect" target="_blank" />
+					<area id="knochen" style="z-index: '1';" alt="Knochen" coords="417,826,444,789,458,793,430,831" shape="poly" target="_blank" />
+					<area id="knochen1" style="z-index: '1';" alt="Knochen" coords="412,928,420,920,453,932,486,953,477,957" shape="poly" target="_blank" />
+					<area id="knochen2" style="z-index: '1';" alt="Knochen" coords="350,952,385,907,400,913,365,956" shape="poly" target="_blank" />
+					<area id="knochen3" style="z-index: '1';" alt="Knochen" coords="258,960,265,963,300,960,293,972" shape="poly" target="_blank" />
+					<area id="knochen4" alt="Knochen" coords="127,967,170,960,200,940,212,950,175,966,142,983" shape="poly" target="_blank" />
+					<area id="knochen5" alt="Knochen" coords="177,1026,210,1005,220,1015,185,1036" shape="poly" target="_blank" />
+					<area id="blauertopf" style="z-index: '0';" alt="Blauer Topf" coords="132,328,220,438" shape="rect" target="_blank" />
+					<area id="bodenunten" style="z-index: '0';" alt="Boden unten" coords="303,756,540,1050" shape="rect" target="_blank" />
+					<area id="bodenunten1" style="z-index: '0';" alt="Boden unten" coords="40,940,300,1060" shape="rect" target="_blank" />
+					<area id="doppelgrab" style="z-index: '0';" alt="Doppelgrab" coords="51,624,270,923" shape="rect" target="_blank" />
+					<area id="kreutz" style="z-index: '0';" alt="Kreutz" coords="180,20,400,230" shape="rect" target="_blank" />
+					<area id="kreutz1" style="z-index: '0';" alt="Kreutz" coords="253,244,315,280" shape="rect" target="_blank" />
+					<area id="wuermer" style="z-index: '0';" alt="Wuermer" coords="42,239,256,327" shape="rect" target="_blank" />
+					<area id="wuermer1" style="z-index: '0';" alt="Wuermer" coords="259,284,310,349" shape="rect" target="_blank" />
+					<area id="wuermer2" style="z-index: '0';" alt="Wuermer" coords="313,233,547,363" shape="rect" target="_blank" />
+					<area id="blume" style="z-index: '0';" alt="Blume" coords="56,151,190,240" shape="rect" target="_blank" />
+				</map>
+		
+				<div class="friedhof-img">
+					<img src="img/friedhof-cropped.jpg" title="Friedhof" usemap="#grab" style="height: 700px;" />
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="nav">
-		<div>
-			<span class="glyphicon glyphicon-chevron-up"></span>
+	<div class="lift" style="display:none;">
+		<div style="padding-left: 3px;">
+			<a class="up"><span class="glyphicon glyphicon-chevron-up"></span></a>
 		</div>
 		<div>
-			<span class="glyphicon glyphicon-home"></span>
+			<a href="#start" class="home"><span class="glyphicon glyphicon-home"></span></a>
 		</div>
 		<div>
-			<span class="glyphicon glyphicon-chevron-down"></span>
+			<a class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
 		</div>
 	</div>
 
