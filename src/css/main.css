@@ -1,6 +1,48 @@
-body {
-	padding-top: 60px;
+body, html {
+	height: 100%;
 }
-.content {
+body {
+	background: #222;
+}
+
+#header {
+	position: relative;
 	padding-top: 10px;
+	height: 1200px;
+}
+.header-img {
+	position: relative;
+	z-index: 20;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.content {
+	width: 800px;
+	color: #FFF;
+	margin: 0 auto;
+}
+
+#nav {
+	position: fixed;
+	right: 40px;
+	top: 50%;
+	margin-top: -50px;
+	color: #F8FE40;
+	font-size: 50px;
+}
+
+#nav div {
+	width: 60px;
+	opacity: 0.8;
+	margin-bottom: 7px;
+}
+
+.jumbotron-header {
+	position: relative;
+	z-index: 30;
+	width: 1000px;
+	margin: 0 auto;
+	background: none;
+	color: #EEE;
 }

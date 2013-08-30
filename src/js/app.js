@@ -1,17 +1,26 @@
-var hpa = {};
+var hnx = {};
 
-(function(mui) {
+(function(hnx, $) {
 	'use strict';
 
-	var appModule = angular.module('hpa', ['category']);
+	var initTooltips = function() {
+		$('area').each(function(index, area) {
+			$(area).qtip({
+				style: 'red'
+			});
+		});
+	};
 
-	appModule.config(function($routeProvider) {
-		$routeProvider.when('/category', {
-			templateUrl: 'partials/categoryList.html',
-			controller: 'CategoryListCtrl'
+	var initSmoothScrolling = function() {
+		$('area').on('click', function() {
+			var targetId = $(this).attr('href');
+			hnx.scrollTo(targetId, 2000);
+			return false;
 		});
-		$routeProvider.otherwise({
-			redirectTo: '/category'
-		});
-	});
-})(hpa);
+	};
+
+	hnx.init = function() {
+		initTooltips();
+		initSmoothScrolling();
+	};
+})(hnx, jQuery);
