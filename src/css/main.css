@@ -47,9 +47,12 @@ object {
 
 .content {
 	width: 100%;
-	max-width: 1000px;
+	max-width: 750px;
 	margin: 0 auto;
 	padding-top: 90px;
+}
+.content-start {
+	max-width: 1000px;
 }
 .content h1 {
 	margin-top: 24px;
@@ -58,7 +61,7 @@ object {
 	font-size: 22px;
 }
 .desc {
-	width: 300px;
+	width: 320px;
 	margin: 17px auto;
 }
 
@@ -98,3 +101,20 @@ object {
 		display: none !important;
 	}
 }
+@media (max-width: 768px) {
+	.hidden-mobile {
+		display: none;
+	}
+}
+@media (max-height: 768px) {
+	.responsive-iframe {
+		height: 350px;
+		width: 623px;
+	}
+}
+
+#impressum a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
