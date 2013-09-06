@@ -17,6 +17,7 @@ iframe {
 	text-align: center;
 	min-height: 100%;
 	margin-bottom: 100px;
+	z-index: -10;
 }
 .navbar .social {
 	margin-top: 14px;
@@ -104,8 +105,24 @@ object {
 		display: none;
 	}
 }
+
+.vimeo-placeholder,
+.popcorn-placeholder,
+.prezi-placeholder,
+.storify-placeholder {
+	width: 750px;
+	height: 421px;
+}
+.vuvox-placeholder {
+	width: 100%;
+	height: 400px;
+}
 @media (max-height: 768px) {
-	.responsive-iframe {
+	.responsive-iframe,
+	.vimeo-placeholder,
+	.popcorn-placeholder,
+	.prezi-placeholder,
+	.storify-placeholder {
 		height: 350px;
 		width: 623px;
 	}

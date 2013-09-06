@@ -18,7 +18,7 @@
 <!-- endbuild -->
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" style="filter:none!important;">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
@@ -35,8 +35,8 @@
 		
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen <b class="caret"></b></a>
-					<ul class="dropdown-menu">
+				<li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown">Themen <b class="caret"></b></a>
+					<ul class="dropdown-menu scrolling-menu">
 						<li><a href="#1meter17">Ein laufender Meter erkundet die Stadt <span class="badge">1,17m</span></a></li>
 						<li><a href="#0meter">Ein Leben in zwei Tüten <span class="badge">0m</span></a></li>
 						<li><a href="#0meter10">So klingt Heilbronn von unten <span class="badge">-0,10m</span></a></li>
@@ -52,7 +52,6 @@
 			</ul>
 		</div>
 	</nav>
-	
 	
 	<div id="start" class="fullscreen lift-target">
 		<div class="content content-start">
@@ -87,6 +86,7 @@
 		</div>
 	</div>
 
+	<div class="articles">
 	<div id="1meter17" class="fullscreen lift-target">
 		<div class="content">
 			<span class="label label-danger label-depth">1,17 Meter</span>
@@ -97,7 +97,7 @@
 				<p>Durch Kinderaugen sieht man ständig Hinterteile - und Heilbronn aus einer ganz anderen Perspektive.</p>
 			</div>
 
-			<iframe src="http://player.vimeo.com/video/65516362" allowFullScreen="true" height="421" width="750" class="responsive-iframe"></iframe>
+			<div class="vimeo-placeholder placeholder" data-video="65516362"></div>
 		</div>
 	</div>
 
@@ -111,7 +111,7 @@
 				<p>Sein ganzer Stolz: ein Handy. Damit kann er Musik hören und alles um sich herum vergessen.</p>
 			</div>
 
-			<iframe src="http://player.vimeo.com/video/65156656" allowFullScreen="true" height="421" width="750"></iframe>
+			<div class="vimeo-placeholder placeholder" data-video="65156656"></div>
 		</div>
 	</div>
 
@@ -124,12 +124,7 @@
 				<p>Auch Im Großstadtlärm lohnt es sich,<br /> genauer hinzuhören.</p>
 			</div>
 
-			<object width="100%" height="400">
-				<param name="allowFullScreen" value="true" />
-				<param name="movie" value="http://www.vuvox.com/collage_express/collage.swf?collageID=069ab58401" />
-				<embed src="http://www.vuvox.com/collage_express/collage.swf?collageID=069ab58401" allowFullScreen="true"
-					type="application/x-shockwave-flash" width="100%" height="400"></embed>
-			</object>
+			<div class="vuvox-placeholder placeholder" data-id="069ab58401"></div>
 		</div>
 	</div>
 
@@ -142,7 +137,7 @@
 				<p>Manche Kellertreppen führen an magische Orte. XY wohnt direkt über seinem privaten Pub.</p>
 			</div>
 			
-			<iframe src="http://prezi.com/embed/7tz2cb7mhpai/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="550" height="400" frameBorder="0"></iframe>
+			<div class="prezi-placeholder placeholder" data-id="7tz2cb7mhpai"></div>
 		</div>
 	</div>
 
@@ -156,7 +151,7 @@
 				<p>Die Pathologie, ein Ort des Grauens? Wir zeigen euch, was dort unten tatsächlich passiert.</p>
 			</div>
 
-			<iframe src="//player.vimeo.com/video/73773133" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<div class="vimeo-placeholder placeholder" data-video="73773133"></div>
 		</div>
 	</div>
 
@@ -196,7 +191,7 @@
 				<p>In den 60ern und 70ern feierten die Heilbronner die besten Partys im Untergrund. Kellerkneipen hatten eine große Anziehungskraft auf Jugendliche.</p>
 			</div>
 			
-			<object  width="100%" height="400"><param name="allowFullScreen" value="true" /><param name="movie" value="http://www.vuvox.com/collage_express/collage.swf?collageID=06d83fd723"/><embed src="http://www.vuvox.com/collage_express/collage.swf?collageID=06d83fd723" allowFullScreen="true" type="application/x-shockwave-flash"  width="100%" height="400"></embed></object>
+			<div class="vuvox-placeholder placeholder" data-id="06d83fd723"></div>
 		</div>
 	</div>
 
@@ -209,7 +204,7 @@
 				<p>Unter Heilbronn gibt es ein Netz, so lang wie das Straßennetz: die Kanalisation. Wir nehmen euch mit - von der Klospülung bis zur Kläranlage.</p>
 			</div>
 			
-			<object width="100%" height="400"><param name="allowFullScreen" value="true" /><param name="movie" value="http://www.vuvox.com/collage_express/collage.swf?collageID=06d68fb5f6"/><embed src="http://www.vuvox.com/collage_express/collage.swf?collageID=06d68fb5f6" allowFullScreen="true" type="application/x-shockwave-flash" width="100%" height="400"></embed></object>
+			<div class="vuvox-placeholder placeholder" data-id="06d68fb5f6"></div>
 		</div>
 	</div>
 
@@ -223,8 +218,7 @@
 				<p>Wir waren da, wo normale Besucher nicht hinkommen: am tiefsten Punkt unter Heilbronn.</p>
 			</div>
 
-			<iframe src="https://popcorn.webmadecontent.org/10zl_" width="640" height="403" frameborder="0" mozallowfullscreen webkitallowfullscreen
-				allowfullscreen></iframe>
+			<div class="popcorn-placeholder placeholder" data-id="10zl_"></div>
 		</div>
 	</div>
 
@@ -234,29 +228,27 @@
 
 			<div class="desc">
 				<p>
-					Heilbronn von unten ist ein Projekt der Volontäre der <a href="http://www.stimme.de">Heilbronner Stimme</a>.
+					Heilbronn von unten ist ein Projekt der Volontäre der <a href="http://www.stimme.de" target="_blank">Heilbronner Stimme</a>.
 				</p>
 			</div>
 
-			<p><iframe src="http://player.vimeo.com/video/65505906" width="750" height="422" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<div class="vimeo-placeholder placeholder" data-video="65505906"></div>
 
 			<div class="desc">
 				<p><strong>Redaktionelle Umsetzung:</strong></p>
-				Daniel Stahl (<a href="https://twitter.com/stahlniel">@stahlniel</a>), <br />Vanessa Wormer (<a href="https://twitter.com/remrow">@remrow</a>), <br />Isabelle Müller (<a href="https://twitter.com/raeusper">@raeusper</a>), <br />Anna Gögelein, <br />Dörthe Thimm, <br />Tamara Kühner (<a href="https://twitter.com/marakuehner">@marakuehner</a>), <br />Tobias Wieland (<a href="https://twitter.com/hochschulen3">@hochschulen3</a>)<br />
+				Daniel Stahl (<a target="_blank" href="https://twitter.com/stahlniel">@stahlniel</a>), <br />Vanessa Wormer (<a target="_blank" href="https://twitter.com/remrow">@remrow</a>), <br />Isabelle Müller (<a target="_blank" href="https://twitter.com/raeusper">@raeusper</a>), <br />Anna Gögelein, <br />Dörthe Thimm, <br />Tamara Kühner (<a target="_blank" href="https://twitter.com/marakuehner">@marakuehner</a>), <br />Tobias Wieland (<a target="_blank" href="https://twitter.com/hochschulen3">@hochschulen3</a>)<br />
 				<br />
-				<p><strong>Beratung:</strong></p><p>Bernd Oswald</p>
+				<p><strong>Beratung:</strong></p><p><a href="http://www.berndoswald.de" target="_blank">Bernd Oswald</a></p>
 				<p><strong>Gestaltung:</strong></p><p>Jana Dauenhauer, <br />Lennart Hinkel</p>
 				<p><strong>Video:</strong></p><p>Helene Gunin, <br />Manuel Maier</p>
 				<p><strong>Fotografie:</strong></p><p>Guide Sawatzki, <br />Mario Berger, <br />Thomas Braun</p>
-				<p><strong>Programmierung:</strong></p><p><a href="http://blog.opendatalab.de/">Felix Ebert</a> (<a href="https://twitter.com/femeb">@femeb</a>)</p>
+				<p><strong>Programmierung:</strong></p><p><a target="_blank" href="http://blog.opendatalab.de/">Felix Ebert</a> (<a target="_blank" href="https://twitter.com/femeb">@femeb</a>)</p>
 				<p><strong>Quellen:</strong></p><p>Stadt Heilbronn, <br />Stadtarchiv Heilbronn, <br />Stadtwerke Heilbronn, <br />Südwestdeutsche Salzwerke AG</p>
 			</div>
 
-			<div style="width:750px;margin:0 auto;">
-				<p><br /></p>
-				<p><script src="//storify.com/stahlniel/heilbronn-von-unten.js"></script><br />
-				<noscript>[<a href="//storify.com/stahlniel/heilbronn-von-unten" target="_blank">View the story "Heilbronn von unten" on Storify</a>]</noscript>
-			</div>
+			<p><br /></p>
+			<script src="http://storify.com/stahlniel/heilbronn-von-unten.js"></script><br />
+			<noscript>[<a href="//storify.com/stahlniel/heilbronn-von-unten" target="_blank">View the story "Heilbronn von unten" on Storify</a>]</noscript>
 			
 			<div class="desc">
 				<address>
@@ -277,6 +269,7 @@
 				</address>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<div class="lift" style="display: none;">
@@ -445,6 +438,7 @@
 	<script src="lib/jquery.qtip.js"></script>
 	<script src="lib/jquery.transit.js"></script>
 	<script src="lib/jquery.rwdImageMaps.js"></script>
+	<script src="lib/jquery.inview.js"></script>
 	<script src="lib/bootstrap.js"></script>
 	<script src="lib/modernizr.js"></script>
 	<script src="js/app.js"></script>

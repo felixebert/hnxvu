@@ -18,7 +18,7 @@ var hnx = {};
 	};
 
 	var initSmoothScrolling = function() {
-		$('area, .nav a, .home').on('click', function() {
+		$('area, .scrolling-menu a, .home').on('click', function() {
 			var targetId = $(this).attr('href');
 			hnx.scrollTo(targetId, 2000);
 			return false;
@@ -31,7 +31,7 @@ var hnx = {};
 		}
 
 		var getNearestTarget = function() {
-			var scrollPosition = $('body').scrollTop();
+			var scrollPosition = $('html,body').scrollTop();
 			var nearestTarget = null;
 			var nearestTargetDistance = null;
 			$('.lift-target').each(function(index, targetElement) {
@@ -48,16 +48,29 @@ var hnx = {};
 		$('.lift .up').on('click', function() {
 			var nearestTarget = getNearestTarget();
 			var targetUp = nearestTarget.prev();
-			if (targetUp.length > 0) {
+			if (targetUp.length > 0 && targetUp.attr('id')) {
 				hnx.scrollTo('#' + targetUp.attr('id'), 2000);
+			} else {
+				hnx.scrollTo('#start', 2000);
 			}
 		});
 
 		$('.lift .down').on('click', function() {
 			var nearestTarget = getNearestTarget();
 			var targetDown = nearestTarget.next();
-			if (targetDown.length > 0) {
+			if (targetDown.length > 0 && targetDown.attr('id')) {
 				hnx.scrollTo('#' + targetDown.attr('id'), 2000);
+			}
+		});
+
+		$('#start').on('inview', function(event, isInView) {
+			if (isInView) {
+				$('.lift').hide();
+			}
+		});
+		$('.articles').on('inview', function(event, isInView) {
+			if (isInView) {
+				$('.lift').show();
 			}
 		});
 	};
@@ -86,23 +99,68 @@ var hnx = {};
 		$('#grab area').on('click', onClick);
 	};
 
+	hnx.replacePlaceholder = function(element) {
+		var html = "";
+		if ($(element).hasClass('vimeo-placeholder')) {
+			html = '<iframe src="http://player.vimeo.com/video/' + $(element).data('video')
+					+ '" allowFullScreen="true" height="421" width="750" class="responsive-iframe"></iframe>';
+		}
+		if ($(element).hasClass('vuvox-placeholder')) {
+			html = '<object width="100%" height="400"><param name="allowFullScreen" value="true" /><param name="movie" value="http://www.vuvox.com/collage_express/collage.swf?collageID='
+					+ $(element).data('id')
+					+ '"/><embed src="http://www.vuvox.com/collage_express/collage.swf?collageID='
+					+ $(element).data('id')
+					+ '" allowFullScreen="true" type="application/x-shockwave-flash" width="100%" height="400"></embed></object>';
+		}
+		if ($(element).hasClass('popcorn-placeholder')) {
+			html = '<iframe src="https://popcorn.webmadecontent.org/' + $(element).data('id')
+					+ '" width="750" height="421" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen class="responsive-iframe"></iframe>';
+		}
+		if ($(element).hasClass('prezi-placeholder')) {
+			html = '<iframe src="http://prezi.com/embed/'
+					+ $(element).data('id')
+					+ '/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="750" height="421" frameBorder="0" class="responsive-iframe"></iframe>';
+		}
+		$(element).after(html);
+		$(element).off('inview');
+		$(element).remove();
+	};
+	var initLazyLoading = function() {
+		var replacePlaceholder = function(event, isInView) {
+			if (isInView && !hnx.isScrolling) {
+				hnx.replacePlaceholder($(this));
+			}
+		};
+		$('.placeholder').on('inview', replacePlaceholder);
+	};
+
 	hnx.init = function() {
 		initTooltips();
 		initLift();
 		initSmoothScrolling();
 		initResponsiveImageMaps();
 		initGrabModals();
+		initLazyLoading();
 	};
 
+	hnx.isScrolling = false;
 	hnx.scrollTo = function(target, duration) {
 		duration = isNaN(duration) ? 500 : duration;
 
-		$('body').animate({
-			scrollTop: $(target).offset().top
-		}, duration);
+		if (!hnx.isScrolling) {
+			hnx.isScrolling = true;
+			$('body,html').animate({
+				scrollTop: $(target).offset().top
+			}, duration, function() {
+				hnx.isScrolling = false;
+				if ($(target).find('.placeholder').length > 0) {
+					hnx.replacePlaceholder($(target).find('.placeholder'));
+				}
+			});
 
-		if (Modernizr.history) {
-			history.pushState({}, "", target);
+			if (Modernizr.history) {
+				history.pushState({}, "", target);
+			}
 		}
 	};
 })(hnx, jQuery);
