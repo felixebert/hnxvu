@@ -9,14 +9,6 @@ body {
 .modal {
 	color: #000;
 }
-#scroll {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	z-index: 0;
-}
 iframe {
 	border: 0;
 }
@@ -25,6 +17,12 @@ iframe {
 	text-align: center;
 	min-height: 100%;
 	margin-bottom: 100px;
+}
+.navbar .social {
+	margin-top: 14px;
+}
+.navbar .social:before {
+	color: #444;
 }
 a,
 area {

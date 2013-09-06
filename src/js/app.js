@@ -93,4 +93,16 @@ var hnx = {};
 		initResponsiveImageMaps();
 		initGrabModals();
 	};
+
+	hnx.scrollTo = function(target, duration) {
+		duration = isNaN(duration) ? 500 : duration;
+
+		$('body').animate({
+			scrollTop: $(target).offset().top
+		}, duration);
+
+		if (Modernizr.history) {
+			history.pushState({}, "", target);
+		}
+	};
 })(hnx, jQuery);
