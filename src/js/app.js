@@ -31,7 +31,7 @@ var hnx = {};
 		}
 
 		var getNearestTarget = function() {
-			var scrollPosition = $('html,body').scrollTop();
+			var scrollPosition = $(window).scrollTop();
 			var nearestTarget = null;
 			var nearestTargetDistance = null;
 			$('.lift-target').each(function(index, targetElement) {
@@ -149,7 +149,7 @@ var hnx = {};
 
 		if (!hnx.isScrolling) {
 			hnx.isScrolling = true;
-			$('body,html').animate({
+			$('body,html,document').animate({
 				scrollTop: $(target).offset().top
 			}, duration, function() {
 				hnx.isScrolling = false;
