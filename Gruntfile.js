@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 					dot: true,
 					cwd: 'src/',
 					dest: 'dist/',
-					src: ['*.{ico,png,txt,html}', 'img/{,*/}*.{gif}', 'fonts/*']
+					src: ['*.{ico,png,txt,html}', 'img/{,*/}*.{gif}', 'fonts/*', 'CNAME']
 				}]
 			}
 		},
@@ -79,6 +79,12 @@ module.exports = function(grunt) {
 					dest: 'dist/img'
 				}]
 			}
+		},
+		'gh-pages': {
+			options: {
+				base: 'dist'
+			},
+			src: ['**']
 		},
 		jsonmin: {
 			dist: {
@@ -124,9 +130,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-devserver');
 	grunt.loadNpmTasks('grunt-testacular');
+	grunt.loadNpmTasks('grunt-gh-pages');
 
 	grunt.registerTask('test', ['testacular']);
 	grunt.registerTask('dataupdate', ['jsonmin:dist']);
 	grunt.registerTask('build', ['clean:dist', 'useminPrepare', 'imagemin', 'concat', 'cssmin', 'uglify', 'copy:dist', 'rev', 'usemin']);
+	grunt.registerTask('install', ['build', 'gh-pages']);
 	grunt.registerTask('default', ['build']);
 };
