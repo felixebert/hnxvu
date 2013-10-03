@@ -9,6 +9,9 @@ body {
 .modal {
 	color: #000;
 }
+.modal-footer {
+	margin-top: 0;
+}
 iframe {
 	border: 0;
 }
@@ -107,14 +110,13 @@ object {
 
 .vimeo-placeholder,
 .popcorn-placeholder,
-.prezi-placeholder,
-.storify-placeholder {
+.prezi-placeholder {
 	width: 750px;
 	height: 421px;
 }
-.vuvox-placeholder {
+.storify-placeholder {
 	width: 100%;
-	height: 400px;
+	height: 600px;
 }
 @media (max-height: 768px) {
 	.responsive-iframe,

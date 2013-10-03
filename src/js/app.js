@@ -79,6 +79,19 @@ var hnx = {};
 		$('img[usemap]').rwdImageMaps();
 	};
 
+	var initKanalModals = function() {
+		var onClick = function() {
+			var target = $(this).attr('href');
+			var placeholder = $(target).find('.modal-placeholder');
+			if (placeholder.length > 0) {
+				hnx.replacePlaceholder(placeholder);
+			}
+			$(target).modal('show');
+			return false;
+		};
+		$('#kanal area').on('click', onClick);
+	};
+
 	var initGrabModals = function() {
 		var onClick = function() {
 			var target = $(this).attr('href');
@@ -104,22 +117,15 @@ var hnx = {};
 		if ($(element).hasClass('vimeo-placeholder')) {
 			html = '<iframe src="http://player.vimeo.com/video/' + $(element).data('video')
 					+ '" allowFullScreen="true" height="421" width="750" class="responsive-iframe"></iframe>';
-		}
-		if ($(element).hasClass('vuvox-placeholder')) {
-			html = '<object width="100%" height="400"><param name="allowFullScreen" value="true" /><param name="movie" value="http://www.vuvox.com/collage_express/collage.swf?collageID='
-					+ $(element).data('id')
-					+ '"/><embed src="http://www.vuvox.com/collage_express/collage.swf?collageID='
-					+ $(element).data('id')
-					+ '" allowFullScreen="true" type="application/x-shockwave-flash" width="100%" height="400"></embed></object>';
-		}
-		if ($(element).hasClass('popcorn-placeholder')) {
+		} else if ($(element).hasClass('popcorn-placeholder')) {
 			html = '<iframe src="https://popcorn.webmadecontent.org/' + $(element).data('id')
 					+ '" width="750" height="421" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen class="responsive-iframe"></iframe>';
-		}
-		if ($(element).hasClass('prezi-placeholder')) {
+		} else if ($(element).hasClass('prezi-placeholder')) {
 			html = '<iframe src="http://prezi.com/embed/'
 					+ $(element).data('id')
 					+ '/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="750" height="421" frameBorder="0" class="responsive-iframe"></iframe>';
+		} else if ($(element).hasClass('storify-placeholder')) {
+			html = '<iframe src="http://storify.com/' + $(element).data('id') + '.html" width="100%" height="600px"></iframe>';
 		}
 		$(element).after(html);
 		$(element).off('inview');
@@ -140,6 +146,7 @@ var hnx = {};
 		initSmoothScrolling();
 		initResponsiveImageMaps();
 		initGrabModals();
+		initKanalModals();
 		initLazyLoading();
 	};
 
