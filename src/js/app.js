@@ -140,6 +140,15 @@ var hnx = {};
 		$('.placeholder').on('inview', replacePlaceholder);
 	};
 
+	var initQuiz = function() {
+		$('#slickQuiz').slickQuiz({
+			skipStartButton: true,
+			checkAnswerText: 'Stimmt das?',
+			nextQuestionText: 'Nächste Frage',
+			tryAgainText: 'Noch einmal'
+		});
+	};
+
 	hnx.init = function() {
 		initTooltips();
 		initLift();
@@ -148,6 +157,7 @@ var hnx = {};
 		initGrabModals();
 		initKanalModals();
 		initLazyLoading();
+		initQuiz();
 	};
 
 	hnx.isScrolling = false;

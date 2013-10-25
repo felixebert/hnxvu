@@ -1,0 +1,54 @@
+.questionCount {
+	color: #888;
+	padding-bottom: 3px;
+}
+.quiz {
+	padding: 14px;
+	background: #F0F0F0;
+	color: #333;
+}
+.quiz h2 {
+	font-size: 20px;
+	margin: 0;
+}
+.questionSound {
+	margin: 21px;
+}
+.questions {
+	padding: 0 14px 0 14px;
+}
+.answers {
+	margin: 0 0 14px -14px;
+}
+.responses {
+	margin-bottom: 14px;
+}
+.answers li {
+	display: inline-block;
+	padding-left: 14px;
+	width: 33%;
+	box-sizing: border-box;
+}
+.answers label {
+	display: block;
+}
+.answers label,
+.answers input {
+	cursor: pointer;
+}
+.answers label span {
+	font-weight: normal;
+}
+.answers img {
+	max-width: 100%;
+	margin-top: 3px;
+}
+.quiz audio {
+	background-color: #F0F0F0;
+}
+.quizScore {
+	margin-top: 7px;
+}
+.quiz ul {
+	padding: 0;
+}

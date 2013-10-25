@@ -16,6 +16,8 @@
 <link href="css/jquery.qtip.css" rel="stylesheet" />
 <link href="css/main.css" rel="stylesheet" />
 <link href="css/social.css" rel="stylesheet" />
+<link href="css/slickQuiz.css" rel="stylesheet" />
+<link href="css/quiz.css" rel="stylesheet" />
 <!-- endbuild -->
 </head>
 <body>
@@ -127,7 +129,18 @@
 					</p>
 				</div>
 
-				<div class="vuvox-placeholder placeholder" data-id="069ab58401"></div>
+				<div id="slickQuiz" class="quiz">
+					<div class="quizArea"></div>
+					<div class="quizResults">
+						<h3 class="quizScore">
+							Deine Punktzahl: <span></span>
+						</h3>
+						<h3 class="quizLevel">
+							<strong>Bewertung: </strong> <span></span>
+						</h3>
+						<div class="quizResultsCopy"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -726,6 +739,8 @@
 	<script src="lib/jquery.inview.js"></script>
 	<script src="lib/bootstrap.js"></script>
 	<script src="lib/modernizr.js"></script>
+	<script src="lib/slickQuiz.js"></script>
+	<script src="js/slickQuiz-config.js"></script>
 	<script src="js/app.js"></script>
 	<!-- endbuild -->
 
